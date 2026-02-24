@@ -12,6 +12,13 @@ app.get('/api/hello', (req, res) => {
         timestamp: new Date()
     });
 });
+app.get('/api/test', (req, res) => {
+    res.json({
+        message: "test API success yay",
+        status: "success",
+        timestamp: new Date()
+    });
+});
 
 // Root route (for testing in the browser)
 app.get('/', (req, res) => {
