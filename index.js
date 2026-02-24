@@ -4,6 +4,13 @@ const app = express();
 // Heroku provides the port via an environment variable
 const PORT = process.env.PORT || 3000;
 
+const mockData = require('./data.json');
+
+// Endpoint to get all users
+app.get('/api/users', (req, res) => {
+    res.json(mockData.users);
+});
+
 // This is your API endpoint
 app.get('/api/hello', (req, res) => {
     res.json({
